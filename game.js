@@ -52,6 +52,15 @@ $(document).keypress(function(){
         // use the button click fn here to avoid storing of UCP , before !started .
     }
 })
+//for mouse
+$("h1").click(function(){
+    if (!started) {
+        started = true;  
+        nextSequence();
+        $("h1").text("level "+ level);
+    } 
+})
+
 
 
 
@@ -80,10 +89,3 @@ function startOver(){
     userClickedPattern = [];
     started = false;
 }
-
-
-
-
-
-
-
